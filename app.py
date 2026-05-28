@@ -1,14 +1,14 @@
 import json
 import os
-
-import streamlit as st
-import pandas as pd
 import random
 import re
-import glob
 import streamlit.components.v1 as components
 
-from utils import make_name_pretty
+import glob
+import pandas as pd
+import streamlit as st
+
+from utils.utils import make_name_pretty
 
 # run locally:
 # python -m streamlit run app.py
@@ -20,18 +20,17 @@ from utils import make_name_pretty
 LANGUAGE = "es"
 POSSIBILITIES = 5
 
-categoryPath = os.path.join(LANGUAGE, f"{LANGUAGE}_categories.json")
+categoryPath = os.path.join("data", LANGUAGE, f"{LANGUAGE}_categories.json")
 with open(categoryPath, "r", encoding="utf-8") as file:
     categories = json.load(file)
 
-st.set_page_config(page_title="Guess the Spanish Word", page_icon="🎵", layout="centered")
+category_options = {}
 
-csv_files = sorted(glob.glob(LANGUAGE + "/game/*.csv"))
-
-if not csv_files:
-    st.error("No CSV files found. Please ensure your playlist CSVs are in the same folder as this script.")
-    st.stop()
-
+for file in glob.glob("data/es/game/playlist_*.csv"):
+    df = pd.read_csv(file)
+    cat_name = make_name_pretty(file)
+    visual_name = f"{cat_name} ({len(df)})"
+    category_options[visual_name] = file
 
 @st.cache_data
 def load_data(filepath):
@@ -65,6 +64,11 @@ def turn_on_hint():
 def turn_on_answer():
     st.session_state.show_answer = True
 
+st.set_page_config(
+    page_title="Guess the Word",
+    page_icon="assets/img/Yohproject-Crayon-Cute-Folder-music.256.png",
+    layout="centered"
+)
 
 st.header("Guess the Hidden Word in Spanish!")
 st.markdown("""
@@ -75,12 +79,18 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-selected_file = st.selectbox(
-    "Choose a Category:",
-    options=csv_files,
-    format_func=make_name_pretty,
-    on_change=reset_game
-)
+selected_visual_name = st.selectbox("Change Category", options=list(category_options.keys()))
+selected_file = category_options[selected_visual_name]
+
+st.markdown("""
+    <style>
+        /* Apuntamos al campo de texto invisible del selectbox */
+        div[data-baseweb="select"] input {
+            caret-color: transparent !important; /* Oculta el cursor parpadeante */
+            pointer-events: none !important; /* El móvil no puede hacer 'touch' en el texto */
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 df_playlist = load_data(selected_file)
 
@@ -134,6 +144,11 @@ else:
         # get words that appear (not options)
         unplayable_raw = str(st.session_state.current_song.get('unplayableWords', ''))
         forbidden_words = [w.strip().lower() for w in unplayable_raw.split(',') if w.strip()]
+
+        # correct words that didnt get selected are also not playable
+        for w in possible_options:
+            if w.lower() != target_lower:
+                forbidden_words.append(w.lower())
 
         # get words from the category that are not in the song and are not the answer
         wrong_words = [w for w in full_category_words if w != target_lower and w not in forbidden_words]
@@ -205,19 +220,24 @@ else:
 
         if st.session_state.show_answer:
             sentences = str(c['matchedLines'])
-            first_verse = sentences.split('|')[0].strip()
+
+            raw_verse = ""
+            for line in sentences.split('|'):
+                if re.search(rf'\b{target_word}\b', line, re.IGNORECASE):
+                    raw_verse = line.strip()
+                    break
 
             highlighted_verse = re.sub(
                 rf'\b({target_word})\b',
-                r'<span style="color: #1DB954; font-weight: bold; font-size: 1.2rem;">\1</span>',
-                first_verse,
+                r'<span style="color: #1DB954; font-weight: bold; font-size: 1.8rem;">\1</span>',
+                raw_verse,
                 flags=re.IGNORECASE
             )
 
             html_reveal = f"""
-                <p style="text-align: center; font-size: 1.5rem; font-style: italic; color: #E0E0E0; margin-top: 20px;">
-                    "{highlighted_verse}"
-                </p>
-            """
+                        <p style="text-align: center; font-size: 1.5rem; font-style: italic; color: #E0E0E0; margin-top: 20px;">
+                            "{highlighted_verse}"
+                        </p>
+                    """
 
             st.markdown(html_reveal, unsafe_allow_html=True)
