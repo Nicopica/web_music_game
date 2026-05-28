@@ -1,0 +1,94 @@
+{
+  "colors": [
+    "rojo", "azul", "verde", "amarillo", "negro", "blanco", "rosa", "morado", "naranja",
+    "gris", "marrón", "violeta", "índigo", "cian", "magenta", "beige",
+    "granate", "turquesa", "carmesí", "escarlata", "lavanda", "oliva", "coral",
+    "fucsia", "esmeralda", "bronce", "plata", "oro", "celeste", "ámbar", "lila", "burdeos"
+  ],
+  "numbers": [
+    "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez",
+    "once", "doce", "trece", "catorce", "quince", "dieciséis", "veinte", "treinta",
+    "cuarenta", "cincuenta", "cien", "mil", "millón", "billón", "mitad", "doble",
+    "primero", "segundo", "tercero",
+    "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14",
+    "15", "20", "24", "50", "100", "1000"
+  ],
+  "animals": [
+    "perro", "gato", "pájaro", "pez", "león", "tigre", "lobo", "caballo", "mono",
+    "serpiente", "águila", "mariposa", "vaca", "cerdo", "oveja", "pollo", "pato",
+    "ratón", "rata", "elefante", "jirafa", "cebra", "tiburón", "ballena", "delfín",
+    "araña", "abeja", "hormiga", "conejo", "ciervo", "zorro", "rana", "murciélago",
+    "búho", "pingüino", "tortuga", "cocodrilo", "paloma", "cuervo", "halcón", "pantera",
+    "oso", "camello", "cisne", "foca", "gorila", "loro", "mosca", "pulpo", "sapo", "toro"
+  ],
+  "food_drinks": [
+    "agua", "vino", "cerveza", "café", "té", "whisky", "manzana", "plátano", "pan",
+    "azúcar", "miel", "leche", "caramelo", "pizza", "hamburguesa", "queso", "carne",
+    "arroz", "patata", "tomate", "pastel", "chocolate", "zumo", "refresco", "vodka", "ron",
+    "champán", "tequila", "hielo", "crema", "limón", "fresa", "uva", "cereza",
+    "sal", "pimienta", "sopa", "ensalada", "ginebra", "licor", "melocotón", "melón",
+    "pasta", "pescado", "huevo", "mantequilla", "aceite", "vinagre", "galleta", "cóctel",
+    "taco", "sushi", "mate", "mezcal"
+  ],
+  "swear_words": [
+    "joder", "mierda", "perra", "maldición", "infierno", "culo", "cabrón", "basura",
+    "bastardo", "polla", "coño", "zorra", "puta", "capullo", "pendejo", "gilipollas",
+    "carajo", "hostia", "pringado", "mamón", "pendeja", "cabrona", "pendejadas", "chingar", "verga", "diablo"
+  ],
+  "body_parts": [
+    "cuello", "espalda", "pecho", "hombros", "rodillas", "dedos", "lengua", "orejas",
+    "nariz", "estómago", "garganta", "muñeca", "tobillo", "cintura", "cerebro", "músculo",
+    "corazón", "ojos", "cara", "manos", "pelo", "labios", "brazos", "piernas", "mente",
+    "piel", "huesos", "sangre", "cabeza", "pies", "uña", "diente", "boca", "alma"
+  ],
+  "weather_nature": [
+    "lluvia", "sol", "viento", "tormenta", "fuego", "nieve", "trueno", "relámpago",
+    "nube", "hielo", "estrella", "luna", "planeta", "galaxia", "universo", "marte",
+    "venus", "brisa", "niebla", "huracán", "tornado", "volcán", "terremoto", "tsunami",
+    "desierto", "bosque", "selva", "océano", "mar", "río", "lago", "montaña", "arena",
+    "tierra", "cielo", "ola", "flor", "árbol", "piedra", "polvo", "luz", "sombra"
+  ],
+  "humans_family": [
+    "bebé", "amigo", "amiga", "madre", "padre", "mamá", "papá", "hermano", "hermana",
+    "chico", "chica", "hombre", "mujer", "niño", "niña", "hijo", "hija", "abuelo",
+    "abuela", "nieto", "nieta", "tío", "tía", "primo", "prima", "sobrino", "sobrina",
+    "esposo", "esposa", "marido", "novia", "novio", "rey", "reina", "jefe", "dios",
+    "ángel", "enemigo"
+  ],
+  "emotions_feelings": [
+    "amor", "odio", "feliz", "triste", "sonrisa", "llorar", "lágrimas", "alegría",
+    "dolor", "miedo", "ira", "loco", "enojado", "beso", "abrazo", "sorpresa", "asco",
+    "aburrimiento", "reír", "gritar", "pasión", "locura", "celos", "paz", "culpa",
+    "orgullo", "pena", "suerte", "deseo", "fe"
+  ],
+  "places_locations": [
+    "casa", "calle", "ciudad", "mundo", "cama", "habitación", "bar", "club", "playa",
+    "barrio", "pueblo", "país", "cielo", "infierno", "discoteca", "hotel", "cuarto",
+    "escuela", "cárcel", "hospital", "iglesia", "esquina"
+  ],
+  "transport": [
+    "coche", "tren", "avión", "barco", "bote", "camión", "bicicleta", "vuelo", "autobús",
+    "taxi", "metro", "moto", "motocicleta", "tranvía", "helicóptero", "furgoneta",
+    "ambulancia", "tractor", "patinete", "yate", "submarino", "nave", "cohete"
+  ],
+  "time_seasons": [
+    "lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo",
+    "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
+    "septiembre", "octubre", "noviembre", "diciembre",
+    "verano", "invierno", "primavera", "otoño",
+    "año", "mes", "semana", "día", "hora", "minuto", "segundo", "madrugada",
+    "mañana", "tarde", "noche", "medianoche", "siglo", "década",
+    "ayer", "hoy", "mañana", "siempre", "nunca", "jamás", "temprano", "pronto"
+  ],
+  "clothes": [
+    "zapatos", "vestido", "camisa", "vaqueros", "chaqueta", "abrigo", "sombrero",
+    "botas", "traje", "pantalones", "falda", "blusa", "jersey", "suéter", "calcetines",
+    "bufanda", "guantes", "cinturón", "corbata", "pijama", "bañador", "zapatillas",
+    "gafas", "anillo", "collar", "bolso", "reloj", "cadena", "joya"
+  ],
+  "directions": [
+    "arriba", "abajo", "izquierda", "derecha", "norte", "sur", "oeste",
+    "alto", "bajo", "centro", "dentro", "fuera", "adelante", "atrás", "cerca",
+    "lejos", "frente", "fondo", "adentro", "afuera", "encima", "debajo"
+  ]
+}
