@@ -9,7 +9,7 @@ import streamlit.components.v1 as components
 from data.logic import handle_category_change, new_song
 from data.ui import render_options_and_answer
 from utils.state import init_session_state
-from utils.utils import make_name_pretty, make_name_pretty, extract_category_key
+from utils.utils import make_name_pretty, extract_category_key
 
 # run locally:
 # python -m .streamlit run app.py
