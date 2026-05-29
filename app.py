@@ -235,7 +235,14 @@ st.set_page_config(page_title="Guess the Word", page_icon="assets/img/Yohproject
 st.header("Guess the Hidden Word in Spanish!")
 st.markdown("""<style>.block-container { padding-top: 3rem; }</style>""", unsafe_allow_html=True)
 
-selected_visual_name = st.selectbox("Change Category", options=list(category_options.keys()))
+with st.popover("Change Category", use_container_width=True):
+    selected_visual_name = st.radio(
+        "",
+        options=list(category_options.keys()),
+        label_visibility="collapsed"
+    )
+
+# selected_visual_name = st.selectbox("Change Category", options=list(category_options.keys()))
 selected_file = category_options[selected_visual_name]
 
 st.markdown("""
@@ -290,7 +297,7 @@ else:
         target_word = st.session_state.target_word
         track_id = str(c['track_id'])
 
-        st.subheader("Listen to the track")
+        # st.subheader("Listen to the track")
 
         # spotify mini player
         iframe_html = f"""
