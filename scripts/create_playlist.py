@@ -12,9 +12,13 @@ from utils.utils import clean_text, sanitize_filename, clean_title, normalize_te
 import json
 
 LANGUAGE = "es"
+MIN_REPETITIONS = 4 # min words for song
+MIN_SONGS = 5 # min songs per category
 
-categoryPath = os.path.join("data", LANGUAGE, f"{LANGUAGE}_categories.json")
-with open(categoryPath, "r", encoding="utf-8") as file:
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+category_path = os.path.join(ROOT_DIR, "data", LANGUAGE, f"{LANGUAGE}_categories.json")
+with open(category_path, "r", encoding="utf-8") as file:
     categories = json.load(file)
 
 load_dotenv()
@@ -50,7 +54,7 @@ def get_lyric(name, artist, filepath):
     return lyrics_text
 
 
-def analyze_lyric(lyrics_text, song_name, artist_name, min_repetitions=4):
+def analyze_lyric(lyrics_text, song_name, artist_name):
     words_per_category = {cat: [] for cat in categories}
     unplayable_per_category = {cat: [] for cat in categories}
     lines_per_category = {cat: [] for cat in categories}
@@ -77,7 +81,7 @@ def analyze_lyric(lyrics_text, song_name, artist_name, min_repetitions=4):
             if total_count == 0:
                 continue
 
-            if total_count < min_repetitions:
+            if total_count < MIN_REPETITIONS:
                 unplayable_per_category[category].append(keyword)
                 continue
 
@@ -161,15 +165,15 @@ for song in songs_playlist:
 print("\nGenerate CSV files")
 
 # delete old files
-game_folder = os.path.join(LANGUAGE, "game")
+game_folder = os.path.join(ROOT_DIR, "data", LANGUAGE, "game")
 os.makedirs(game_folder, exist_ok=True)
-for old_file in glob.glob(os.path.join(game_folder, "*.csv")):
+for old_file in glob.glob(os.path.join(ROOT_DIR, game_folder, "*.csv")):
     os.remove(old_file)
 
 # generate new files
 for category, songs in generated_playlists.items():
     # only create category if there are at least 5 songs
-    if len(songs) >= 5:
+    if len(songs) >= MIN_SONGS:
         df_playlist = pd.DataFrame(songs)
         file_name = f"playlist_{category}.csv"
         df_playlist.to_csv(os.path.join(game_folder, file_name), index=False, encoding='utf-8-sig')

@@ -6,12 +6,10 @@
     "fucsia", "esmeralda", "bronce", "plata", "oro", "celeste", "ámbar", "lila", "burdeos"
   ],
   "numbers": [
-    "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez",
+    "cero","uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez",
     "once", "doce", "trece", "catorce", "quince", "dieciséis", "veinte", "treinta",
     "cuarenta", "cincuenta", "cien", "mil", "millón", "billón", "mitad", "doble",
-    "primero", "segundo", "tercero",
-    "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14",
-    "15", "20", "24", "50", "100", "1000"
+    "primero", "tercero"
   ],
   "animals": [
     "perro", "gato", "pájaro", "pez", "león", "tigre", "lobo", "caballo", "mono",
