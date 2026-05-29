@@ -27,12 +27,14 @@ def load_categories_json():
 
 @st.cache_data
 def get_category_options():
-    options = {}
+    temp_list = []
     for file in glob.glob("data/es/game/playlist_*.csv"):
         df = pd.read_csv(file)
         cat_name = make_name_pretty(file)
         visual_name = f"{cat_name} ({len(df)})"
-        options[visual_name] = file
+        temp_list.append((visual_name, file, len(df)))
+    temp_list.sort(key=lambda x: x[2], reverse=True)
+    options = {item[0]: item[1] for item in temp_list}
     return options
 
 
