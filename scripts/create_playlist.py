@@ -106,7 +106,7 @@ def process_song(song):
     print(f"Searching lyrics for: {name} - {artist}...")
 
     filename = sanitize_filename(f"{artist}_{name}.txt")
-    filepath = os.path.join(LANGUAGE, 'lyrics', filename)
+    filepath = os.path.join(ROOT_DIR, "data", LANGUAGE, 'lyrics', filename)
 
     try:
         lyrics_text = get_lyric(name, artist, filepath)

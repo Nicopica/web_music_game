@@ -1,9 +1,9 @@
 {
   "colors": [
-    "rojo", "azul", "verde", "amarillo", "negro", "blanco", "rosa", "morado", "naranja",
+    "rojo", "azul", "verde", "amarillo", "negro", "blanco", "rosa", "morado",
     "gris", "marrón", "violeta", "índigo", "cian", "magenta", "beige",
     "granate", "turquesa", "carmesí", "escarlata", "lavanda", "oliva", "coral",
-    "fucsia", "esmeralda", "bronce", "plata", "oro", "celeste", "ámbar", "lila", "burdeos"
+    "fucsia", "celeste", "ámbar", "lila", "burdeos"
   ],
   "numbers": [
     "cero","uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez",
@@ -31,7 +31,8 @@
   "swear_words": [
     "joder", "mierda", "perra", "maldición", "infierno", "culo", "cabrón", "basura",
     "bastardo", "polla", "coño", "zorra", "puta", "capullo", "pendejo", "gilipollas",
-    "carajo", "hostia", "pringado", "mamón", "pendeja", "cabrona", "pendejadas", "chingar", "verga", "diablo"
+    "carajo", "hostia", "pringado", "mamón", "pendeja", "cabrona", "pendejadas", "chingar",
+    "verga", "diablo", "mamasita"
   ],
   "body_parts": [
     "cuello", "espalda", "pecho", "hombros", "rodillas", "dedos", "lengua", "orejas",
