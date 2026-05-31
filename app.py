@@ -69,16 +69,16 @@ dictionary_languages = {
 col_empty, col_button = st.columns([8, 2])
 with col_button:
     with st.popover("Language", use_container_width=True):
-        st.radio(
-            "Selecciona el idioma",
-            options=["es", "en", "se", "de"],
-            key="language",
-            on_change=handle_language_change,
-            label_visibility="collapsed",
-            format_func=lambda x: dictionary_languages.get(x, x)
-        )
 
-# update language change
+        for lang_code, lang_name in dictionary_languages.items():
+
+            if st.button(lang_name, key=f"btn_{lang_code}", use_container_width=True):
+
+                if st.session_state.language != lang_code:
+                    st.session_state.language = lang_code
+                    handle_language_change()
+                st.rerun()
+
 current_lang = st.session_state.language
 categories = load_categories_json(current_lang)
 category_options = get_category_options(current_lang)
