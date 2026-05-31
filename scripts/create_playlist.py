@@ -11,14 +11,15 @@ from read_playlist import get_playlist_tracks
 from utils.utils import clean_text, sanitize_filename, clean_title, normalize_text
 import json
 
-LANGUAGE = "es"
+LANGUAGE = "se"
 MIN_REPETITIONS = 4 # min words for song
 MIN_SONGS = 5 # min songs per category
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-category_path = os.path.join(ROOT_DIR, "data", LANGUAGE, f"{LANGUAGE}_categories.json")
-with open(category_path, "r", encoding="utf-8") as file:
+CATEGORY_PATH = os.path.join(ROOT_DIR, "data", LANGUAGE, f"{LANGUAGE}_categories.json")
+
+with open(CATEGORY_PATH, "r", encoding="utf-8") as file:
     categories = json.load(file)
 
 load_dotenv()
@@ -159,26 +160,33 @@ def process_song(song):
     except Exception as e:
         print(f"Error processing {name}: {e}")
 
+def main():
+    GAME_FOLDER = os.path.join(ROOT_DIR, "data", LANGUAGE, "game")
+    LYRICS_FOLDER = os.path.join(ROOT_DIR, "data", LANGUAGE, "lyrics")
 
-for song in songs_playlist:
-    process_song(song)
-print("\nGenerate CSV files")
+    os.makedirs(LYRICS_FOLDER, exist_ok=True)
 
-# delete old files
-game_folder = os.path.join(ROOT_DIR, "data", LANGUAGE, "game")
-os.makedirs(game_folder, exist_ok=True)
-for old_file in glob.glob(os.path.join(ROOT_DIR, game_folder, "*.csv")):
-    os.remove(old_file)
+    for song in songs_playlist:
+        process_song(song)
+    print("\nGenerate CSV files")
 
-# generate new files
-for category, songs in generated_playlists.items():
-    # only create category if there are at least 5 songs
-    if len(songs) >= MIN_SONGS:
-        df_playlist = pd.DataFrame(songs)
-        file_name = f"playlist_{category}.csv"
-        df_playlist.to_csv(os.path.join(game_folder, file_name), index=False, encoding='utf-8-sig')
-        print(f"Saved: {file_name} ({len(songs)} songs with stats and lines)")
+    # delete old files
+    os.makedirs(GAME_FOLDER, exist_ok=True)
+    for old_file in glob.glob(os.path.join(ROOT_DIR, GAME_FOLDER, "*.csv")):
+        os.remove(old_file)
 
-print("Finished!")
-print(notProcessed)
-print(len(notProcessed))
+    # generate new files
+    for category, songs in generated_playlists.items():
+        # only create category if there are at least 5 songs
+        if len(songs) >= MIN_SONGS:
+            df_playlist = pd.DataFrame(songs)
+            file_name = f"playlist_{category}.csv"
+            df_playlist.to_csv(os.path.join(GAME_FOLDER, file_name), index=False, encoding='utf-8-sig')
+            print(f"Saved: {file_name} ({len(songs)} songs with stats and lines)")
+
+    print("Finished!")
+    print(notProcessed)
+    print(len(notProcessed))
+
+if __name__ == '__main__':
+    main()

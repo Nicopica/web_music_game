@@ -1,0 +1,93 @@
+{
+  "colors": [
+    "rot", "blau", "grün", "gelb", "schwarz", "weiß", "rosa", "lila",
+    "grau", "braun", "violett", "indigo", "cyan", "magenta", "beige",
+    "kastanienbraun", "türkis", "karmesinrot", "scharlachrot", "lavendel", "oliv", "koralle",
+    "fuchsia", "hellblau", "bernstein", "flieder", "burgunder"
+  ],
+  "numbers": [
+    "null", "eins", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun", "zehn",
+    "elf", "zwölf", "dreizehn", "vierzehn", "fünfzehn", "sechzehn", "zwanzig", "dreißig",
+    "vierzig", "fünfzig", "einhundert", "eintausend", "million", "milliarde", "halb", "doppelt",
+    "erste", "dritte"
+  ],
+  "animals": [
+    "hund", "katze", "vogel", "fisch", "löwe", "tiger", "wolf", "pferd", "affe",
+    "schlange", "adler", "schmetterling", "kuh", "schwein", "schaf", "huhn", "ente",
+    "maus", "ratte", "elefant", "giraffe", "zebra", "hai", "wal", "delfin",
+    "spinne", "biene", "ameise", "kaninchen", "hirsch", "fuchs", "frosch", "fledermaus",
+    "eule", "pinguin", "schildkröte", "krokodil", "taube", "krähe", "falke", "panther",
+    "bär", "kamel", "schwan", "robbe", "gorilla", "papagei", "fliege", "oktopus", "kröte", "stier"
+  ],
+  "food_drinks": [
+    "wasser", "wein", "bier", "kaffee", "tee", "whiskey", "apfel", "banane", "brot",
+    "zucker", "honig", "milch", "süßigkeiten", "pizza", "hamburger", "käse", "fleisch",
+    "reis", "kartoffel", "tomate", "kuchen", "schokolade", "saft", "limonade", "wodka", "rum",
+    "champagner", "tequila", "eis", "sahne", "zitrone", "erdbeere", "traube", "kirsche",
+    "salz", "pfeffer", "suppe", "salat", "gin", "likör", "pfirsich", "melone",
+    "pasta", "fisch", "ei", "butter", "öl", "essig", "keks", "cocktail",
+    "taco", "sushi", "mate", "mezcal"
+  ],
+  "swear_words": [
+    "ficken", "scheiße", "schlampe", "verdammt", "hölle", "arsch", "bastard", "müll",
+    "mistkerl", "schwanz", "fotze", "nutte", "hure", "wichser", "vollidiot", "arschloch",
+    "verflixt", "mist", "versager", "lutscher", "idiot", "zicke", "schwachsinn", "scheiß",
+    "pimmel", "teufel", "babe"
+  ],
+  "body_parts": [
+    "hals", "rücken", "brust", "schultern", "knie", "finger", "zunge", "ohren",
+    "nase", "magen", "kehle", "handgelenk", "knöchel", "taille", "gehirn", "muskel",
+    "herz", "augen", "gesicht", "hände", "haare", "lippen", "arme", "beine", "verstand",
+    "haut", "knochen", "blut", "kopf", "füße", "nagel", "zahn", "mund", "seele"
+  ],
+  "weather_nature": [
+    "regen", "sonne", "wind", "sturm", "feuer", "schnee", "donner", "blitz",
+    "wolke", "eis", "stern", "mond", "planet", "galaxie", "universum", "mars",
+    "venus", "brise", "nebel", "hurrikan", "tornado", "vulkan", "erdbeben", "tsunami",
+    "wüste", "wald", "dschungel", "ozean", "meer", "fluss", "see", "berg", "sand",
+    "erde", "himmel", "welle", "blume", "baum", "stein", "staub", "licht", "schatten"
+  ],
+  "humans_family": [
+    "baby", "freund", "freundin", "mutter", "vater", "mama", "papa", "bruder", "schwester",
+    "junge", "mädchen", "mann", "frau", "junge", "mädchen", "sohn", "tochter", "großvater",
+    "großmutter", "enkel", "enkelin", "onkel", "tante", "cousin", "cousine", "neffe", "nichte",
+    "ehemann", "ehefrau", "mann", "freundin", "freund", "könig", "königin", "chef", "gott",
+    "engel", "feind"
+  ],
+  "emotions_feelings": [
+    "liebe", "hass", "glücklich", "traurig", "lächeln", "weinen", "tränen", "freude",
+    "schmerz", "angst", "wut", "verrückt", "wütend", "kuss", "umarmung", "überraschung", "ekel",
+    "langeweile", "lachen", "schreien", "leidenschaft", "wahnsinn", "eifersucht", "frieden", "schuld",
+    "stolz", "kummer", "glück", "verlangen", "glaube"
+  ],
+  "places_locations": [
+    "haus", "straße", "stadt", "welt", "bett", "zimmer", "bar", "club", "strand",
+    "nachbarschaft", "stadt", "land", "himmel", "hölle", "disco", "hotel", "raum",
+    "schule", "gefängnis", "krankenhaus", "kirche", "ecke"
+  ],
+  "transport": [
+    "auto", "zug", "flugzeug", "schiff", "boot", "lkw", "fahrrad", "flug", "bus",
+    "taxi", "u-bahn", "motorrad", "moped", "straßenbahn", "hubschrauber", "transporter",
+    "krankenwagen", "traktor", "roller", "yacht", "u-boot", "raumschiff", "rakete"
+  ],
+  "time_seasons": [
+    "montag", "dienstag", "mittwoch", "donnerstag", "freitag", "samstag", "sonntag",
+    "januar", "februar", "märz", "april", "mai", "juni", "juli", "august",
+    "september", "oktober", "november", "dezember",
+    "sommer", "winter", "frühling", "herbst",
+    "jahr", "monat", "woche", "tag", "stunde", "minute", "sekunde", "morgengrauen",
+    "morgen", "nachmittag", "nacht", "mitternacht", "jahrhundert", "jahrzehnt",
+    "gestern", "heute", "morgen", "immer", "nie", "niemals", "früh", "bald"
+  ],
+  "clothes": [
+    "schuhe", "kleid", "hemd", "jeans", "jacke", "mantel", "hut",
+    "stiefel", "anzug", "hose", "rock", "bluse", "pullover", "pulli", "socken",
+    "schal", "handschuhe", "gürtel", "krawatte", "schlafanzug", "badeanzug", "turnschuhe",
+    "brille", "ring", "halskette", "tasche", "uhr", "kette", "juwel"
+  ],
+  "directions": [
+    "oben", "unten", "links", "rechts", "norden", "süden", "westen", "osten",
+    "hoch", "niedrig", "mitte", "innen", "außen", "vorwärts", "rückwärts", "nah",
+    "fern", "vorne", "hinten", "in", "aus", "über", "unter"
+  ]
+}

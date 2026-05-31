@@ -20,4 +20,6 @@ def init_session_state(default_category):
         st.session_state.current_category = None
     if 'visual_category' not in st.session_state:
         st.session_state.visual_category = default_category
+    if 'language' not in st.session_state:
+        st.session_state.language = "es"
 

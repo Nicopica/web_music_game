@@ -1,0 +1,93 @@
+{
+  "colors": [
+    "röd", "blå", "grön", "gul", "svart", "vit", "rosa", "lila",
+    "grå", "brun", "violett", "indigo", "cyan", "magenta", "beige",
+    "rödbrun", "turkos", "karmosinröd", "scharlakansröd", "lavendel", "olivgrön", "korall",
+    "fuchsia", "ljusblå", "bärnsten", "syren", "vinröd"
+  ],
+  "numbers": [
+    "noll", "ett", "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio", "tio",
+    "elva", "tolv", "tretton", "fjorton", "femton", "sexton", "tjugo", "trettio",
+    "fyrtio", "femtio", "hundra", "tusen", "miljon", "miljard", "halv", "dubbel",
+    "första", "tredje"
+  ],
+  "animals": [
+    "hund", "katt", "fågel", "fisk", "lejon", "tiger", "varg", "häst", "apa",
+    "orm", "örn", "fjäril", "ko", "gris", "får", "kyckling", "anka",
+    "mus", "råtta", "elefant", "giraff", "zebra", "haj", "val", "delfin",
+    "spindel", "bi", "myra", "kanin", "hjort", "räv", "groda", "fladdermus",
+    "uggla", "pingvin", "sköldpadda", "krokodil", "duva", "kråka", "hök", "panter",
+    "björn", "kamel", "svan", "säl", "gorilla", "papegoja", "fluga", "bläckfisk", "padda", "tjur"
+  ],
+  "food_drinks": [
+    "vatten", "vin", "öl", "kaffe", "te", "whisky", "äpple", "banan", "bröd",
+    "socker", "honung", "mjölk", "godis", "pizza", "hamburgare", "ost", "kött",
+    "ris", "potatis", "tomat", "kaka", "choklad", "juice", "läsk", "vodka", "rom",
+    "champagne", "tequila", "is", "grädde", "citron", "jordgubbe", "druva", "körsbär",
+    "salt", "peppar", "soppa", "sallad", "gin", "sprit", "persika", "melon",
+    "pasta", "fisk", "ägg", "smör", "olja", "vinäger", "kaka", "cocktail",
+    "taco", "sushi", "mate", "mezcal"
+  ],
+  "swear_words": [
+    "fan", "skit", "fitta", "jävlar", "helvete", "röv", "jävel", "skräp",
+    "jävel", "kuk", "fitta", "slampa", "hora", "skitstövel", "pucko", "arsle",
+    "jävlar", "skit", "förlorare", "sugare", "idiot", "kärring", "skitsnack", "fan",
+    "kuk", "djävul", "brud"
+  ],
+  "body_parts": [
+    "nacke", "rygg", "bröst", "axlar", "knän", "fingrar", "tunga", "öron",
+    "näsa", "mage", "hals", "handled", "ankel", "midja", "hjärna", "muskel",
+    "hjärta", "ögon", "ansikte", "händer", "hår", "läppar", "armar", "ben", "sinne",
+    "hud", "ben", "blod", "huvud", "fötter", "nagel", "tand", "mun", "själ"
+  ],
+  "weather_nature": [
+    "regn", "sol", "vind", "storm", "eld", "snö", "åska", "blixt",
+    "moln", "is", "stjärna", "måne", "planet", "galax", "universum", "mars",
+    "venus", "bris", "dimma", "orkan", "tornado", "vulkan", "jordbävning", "tsunami",
+    "öken", "skog", "djungel", "ocean", "hav", "flod", "sjö", "berg", "sand",
+    "jord", "himmel", "våg", "blomma", "träd", "sten", "damm", "ljus", "skugga"
+  ],
+  "humans_family": [
+    "bebis", "vän", "vän", "mamma", "pappa", "mamma", "pappa", "bror", "syster",
+    "pojke", "flicka", "man", "kvinna", "kille", "tjej", "son", "dotter", "farfar",
+    "farmor", "sonson", "sondotter", "farbror", "faster", "kusin", "kusin", "brorson", "brorsdotter",
+    "make", "fru", "man", "flickvän", "pojkvän", "kung", "drottning", "chef", "gud",
+    "ängel", "fiende"
+  ],
+  "emotions_feelings": [
+    "kärlek", "hat", "glad", "ledsen", "leende", "gråta", "tårar", "glädje",
+    "smärta", "rädsla", "ilska", "galen", "arg", "kyss", "kram", "överraskning", "avsky",
+    "uttråkning", "skratta", "skrika", "passion", "galenskap", "svartsjuka", "fred", "skuld",
+    "stolthet", "sorg", "tur", "begär", "tro"
+  ],
+  "places_locations": [
+    "hus", "gata", "stad", "värld", "säng", "rum", "bar", "klubb", "strand",
+    "grannskap", "stad", "land", "himmel", "helvete", "disko", "hotell", "rum",
+    "skola", "fängelse", "sjukhus", "kyrka", "hörn"
+  ],
+  "transport": [
+    "bil", "tåg", "flygplan", "fartyg", "båt", "lastbil", "cykel", "flyg", "buss",
+    "taxi", "tunnelbana", "motorcykel", "motorcykel", "spårvagn", "helikopter", "skåpbil",
+    "ambulans", "traktor", "sparkcykel", "yacht", "ubåt", "rymdskepp", "raket"
+  ],
+  "time_seasons": [
+    "måndag", "tisdag", "onsdag", "torsdag", "fredag", "lördag", "söndag",
+    "januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti",
+    "september", "oktober", "november", "december",
+    "sommar", "vinter", "vår", "höst",
+    "år", "månad", "vecka", "dag", "timme", "minut", "sekund", "gryning",
+    "morgon", "eftermiddag", "natt", "midnatt", "århundrade", "årtionde",
+    "igår", "idag", "imorgon", "alltid", "aldrig", "aldrig", "tidigt", "snart"
+  ],
+  "clothes": [
+    "skor", "klänning", "skjorta", "jeans", "jacka", "rock", "hatt",
+    "stövlar", "kostym", "byxor", "kjol", "blus", "tröja", "tröja", "strumpor",
+    "halsduk", "handskar", "bälte", "slips", "pyjamas", "baddräkt", "sneakers",
+    "glasögon", "ring", "halsband", "väska", "klocka", "kedja", "juvel"
+  ],
+  "directions": [
+    "upp", "ner", "vänster", "höger", "norr", "söder", "väster", "öster",
+    "hög", "låg", "mitten", "inne", "ute", "framåt", "bakåt", "nära",
+    "långt", "fram", "bak", "i", "ut", "ovanför", "under"
+  ]
+}

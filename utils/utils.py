@@ -21,7 +21,8 @@ def clean_title(name):
     name = re.sub(r'\(.*?\)|\[.*?]', '', name)
     name = name.split(' - ')[0]
     name = re.split(
-        r'(?i)\s+\b(?:feat\.?|with|con|remix|versión|remasterizado|remastered|edited|en vivo|live)\b', name)[0]
+        r'(?i)\s+\b(?:feat\.?|with|con|remix|versión|version|akustik|ny|radio'
+        r'|remasterizado|remastered|remaster|edited|en vivo|live|original|mix|acoustic|20|19|from)\b', name)[0]
     return name.strip()
 
 # def make_name_pretty(path):

@@ -1,38 +1,44 @@
 import json
 import os
-import random
 import glob
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 
-from data.logic import handle_category_change, new_song
-from data.ui import render_options_and_answer
+from website.logic import handle_category_change, new_song, handle_language_change
+from website.ui import render_options_and_answer
 from utils.state import init_session_state
 from utils.utils import make_name_pretty, extract_category_key
+
+# ideas:
+#   show whole lyrics and places to fill the missing words
+#   more languages
+#   get better categories (beter distribution)
+#   import playlist?
+
 
 # run locally:
 # python -m .streamlit run app.py
 # python -m .streamlit run app.py --server.headless true
 
-LANGUAGE = "es"
 # POSSIBILITIES = 5
 
-category_path = os.path.join("data", LANGUAGE, f"{LANGUAGE}_categories.json")
 
 @st.cache_data
-def load_categories_json():
+def load_categories_json(language="es"):
+    category_path = os.path.join("data", language, f"{language}_categories.json")
     with open(category_path, "r", encoding="utf-8") as file:
         return json.load(file)
 
 @st.cache_data
-def get_category_options():
+def get_category_options(language="es"):
     temp_list = []
-    for file in glob.glob("data/es/game/playlist_*.csv"):
+    for file in glob.glob(f"data/{language}/game/playlist_*.csv"):
         df = pd.read_csv(file)
         cat_name = make_name_pretty(file)
         visual_name = f"{cat_name} ({len(df)})"
         temp_list.append((visual_name, file, len(df)))
+    # sort by quantity of songs
     temp_list.sort(key=lambda x: x[2], reverse=True)
     options = {item[0]: item[1] for item in temp_list}
     return options
@@ -45,7 +51,6 @@ def load_data(filepath):
     except FileNotFoundError:
         return None
 
-categories = load_categories_json()
 category_options = get_category_options()
 
 init_session_state(list(category_options.keys())[0])
@@ -54,8 +59,35 @@ init_session_state(list(category_options.keys())[0])
 st.set_page_config(page_title="Guess the Word", page_icon="assets/img/Yohproject-Crayon-Cute-Folder-music.256.png",
                    layout="centered")
 
-# st.header("Guess the Hidden Word in Spanish!")
-# st.markdown("""<style>.block-container { padding-top: 3rem; }</style>""", unsafe_allow_html=True)
+dictionary_languages = {
+    "es": "Español",
+    "en": "English",
+    "se": "Svenska",
+    "de": "Deutsch"
+}
+
+col_empty, col_button = st.columns([8, 2])
+with col_button:
+    with st.popover("Language", use_container_width=True):
+        st.radio(
+            "Selecciona el idioma",
+            options=["es", "en", "se", "de"],
+            key="language",
+            on_change=handle_language_change,
+            label_visibility="collapsed",
+            format_func=lambda x: dictionary_languages.get(x, x)
+        )
+
+# update language change
+current_lang = st.session_state.language
+categories = load_categories_json(current_lang)
+category_options = get_category_options(current_lang)
+
+if st.session_state.get('visual_category') is None:
+    st.session_state.visual_category = list(category_options.keys())[0]
+
+default_cat = list(category_options.keys())[0]
+init_session_state(default_cat)
 
 # categories bar
 with st.popover(f"Current category: {st.session_state.visual_category}", use_container_width=True):
