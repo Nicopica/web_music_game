@@ -14,6 +14,16 @@ st.set_page_config(
     page_icon="assets/img/Yohproject-Crayon-Cute-Folder-music.256.png",
     layout="centered"
 )
+st.markdown("""
+    <style>
+        /* hide top */
+        [data-testid="stHeader"] {visibility: hidden;}
+        
+        /* hide bottom */
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+    </style>
+""", unsafe_allow_html=True)
 
 # cache
 @st.cache_data
@@ -53,8 +63,6 @@ if st.session_state.get('visual_category') not in category_options:
 
 if 'translate_to' not in st.session_state or st.session_state.translate_to not in dictionary_languages:
     st.session_state.translate_to = options_translation[0]
-
-
 
 # sidebar
 with st.sidebar:

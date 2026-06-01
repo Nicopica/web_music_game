@@ -11,6 +11,8 @@ prepositions_languages = {"esp": "en", "eng": "in", "sve": "på", "deu": "auf", 
 # python -m spacy download de_core_news_sm
 # python -m spacy download ca_core_news_sm
 
+#  python -m streamlit run app.py --server.headless true
+
 SPACY_MODELS = {
     "esp": "es_core_news_sm",
     "eng": "en_core_web_sm",
