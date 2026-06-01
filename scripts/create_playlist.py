@@ -226,7 +226,7 @@ class ProcessorPlaylist:
 
         # process all songs
         for count, song in enumerate(songs_playlist):
-            if count % 20 == 0:
+            if count % 100 == 0:
                 print(f"{count}/{len(songs_playlist)}")
             self.process_song(song)
 
