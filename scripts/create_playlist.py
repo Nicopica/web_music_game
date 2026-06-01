@@ -9,9 +9,9 @@ import re
 import spacy
 
 from read_playlist import get_playlist_tracks
-from utils.utils import clean_text, sanitize_filename, clean_title, normalize_text, SPACY_MODELS, EXPECTED_SYNTAX
+from utils.utils import clean_text, sanitize_filename, clean_title, normalize_text, SPACY_MODELS, EXPECTED_SYNTAX, \
+    dictionary_languages
 
-language = "sve"
 MIN_REPETITIONS = 4 # min words for song
 MIN_SONGS = 5 # min songs per category
 
@@ -20,12 +20,6 @@ ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MASTER_CSV_PATH = os.path.join(ROOT_DIR, "data", "master_categories.csv")
 
 df_master = pd.read_csv(MASTER_CSV_PATH)
-
-categories = {}
-for cat in df_master['category'].dropna().unique():
-    words = df_master[df_master['category'] == cat][language].dropna().astype(str).str.lower().tolist()
-    if words:
-        categories[cat] = words
 
 load_dotenv()
 GENIUS_ACCESS_TOKEN = os.getenv('GENIUS_ACCESS_TOKEN')
@@ -188,11 +182,16 @@ def process_song(song):
     except Exception as e:
         print(f"Error processing {name}: {e}")
 
-def main():
+def process_language(language="esp"):
     GAME_FOLDER = os.path.join(ROOT_DIR, "data", language, "game")
     LYRICS_FOLDER = os.path.join(ROOT_DIR, "data", language, "lyrics")
-
     os.makedirs(LYRICS_FOLDER, exist_ok=True)
+
+    categories = {}
+    for cat in df_master['category'].dropna().unique():
+        words = df_master[df_master['category'] == cat][language].dropna().astype(str).str.lower().tolist()
+        if words:
+            categories[cat] = words
 
     for song in songs_playlist:
         process_song(song)
@@ -215,6 +214,11 @@ def main():
     print("Finished!")
     print(notProcessed)
     print(len(notProcessed))
+
+def main():
+    languages = dictionary_languages.items()
+    for l in languages:
+        process_language(l)
 
 if __name__ == '__main__':
     main()
