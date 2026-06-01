@@ -3,7 +3,7 @@ import re
 import unicodedata
 
 dictionary_languages = {"esp": "Español", "eng": "English", "sve": "Svenska", "deu": "Deutsch", "cat": "Català"}
-prepositions_languages = {"esp": "eng", "eng": "in", "sve": "på", "deu": "auf", "cat": "eng"}
+prepositions_languages = {"esp": "en", "eng": "in", "sve": "på", "deu": "auf", "cat": "en"}
 
 # python -m spacy download sv_core_news_sm
 # python -m spacy download es_core_news_sm
