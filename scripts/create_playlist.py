@@ -149,7 +149,24 @@ class ProcessorPlaylist:
         artist = song['artist']
         track_id = song["id"]
 
-        print(f"Searching lyrics for: {name} - {artist}...")
+        is_duplicate = False
+
+        # look for duplicate songs by lines to not add more than once
+        cat = [i for i in self.categories]
+        for s in self.generated_playlists[cat]:
+            existing_base_name = clean_title(s['name']).lower()
+            existing_artist = s['artist'].lower()
+            clean_name = clean_title(name).lower()
+            if clean_name == existing_base_name and artist.lower() == existing_artist:
+                print(f"  -> [DUPLICATE VERSION] Skipping '{name}'. {artist} already has this song.")
+                is_duplicate = True
+                break
+
+        if is_duplicate:
+            print(f"Skipping DUPLICATE version based on lyrics: {name}")
+            return
+
+        # print(f"Searching lyrics for: {name} - {artist}...")
         filename = sanitize_filename(f"{artist}_{name}.txt")
         filepath = os.path.join(self.lyrics_folder, filename)
 
@@ -158,7 +175,7 @@ class ProcessorPlaylist:
 
             if not lyrics_text:
                 cleanName = clean_title(name)
-                print(f"Retrying with cleaner title: '{cleanName}'")
+                # print(f"Retrying with cleaner title: '{cleanName}'")
                 lyrics_text = self.get_lyric(cleanName, artist, filepath)
 
                 if not lyrics_text:
@@ -178,19 +195,6 @@ class ProcessorPlaylist:
             # group by category
             for cat in assigned:
                 new_matched_lines = " | ".join(lines_cat[cat])
-                is_duplicate = False
-
-                # look for duplicate songs to not add more than once
-                for seen_lines in self.seen_lines_per_cat[cat]:
-                    similarity = SequenceMatcher(None, new_matched_lines, seen_lines).ratio()
-                    if similarity > 0.9:
-                        is_duplicate = True
-                        break
-
-                if is_duplicate:
-                    print(f"  -> Skipping duplicate version based on lyrics: {name}")
-                    continue
-
                 self.seen_lines_per_cat[cat].append(new_matched_lines)
 
                 self.generated_playlists[cat].append({
@@ -221,7 +225,9 @@ class ProcessorPlaylist:
             return
 
         # process all songs
-        for song in songs_playlist:
+        for count, song in enumerate(songs_playlist):
+            if count % 20 == 0:
+                print(f"{count}/{len(songs_playlist)}")
             self.process_song(song)
 
         print(f"\nGenerating files for{self.language}...")
