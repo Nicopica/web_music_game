@@ -6,9 +6,7 @@ import streamlit.components.v1 as components
 from website.logic import handle_category_change, new_song, handle_language_change
 from website.ui import render_options_and_answer
 from website.state import init_session_state
-from utils.utils import make_name_pretty, extract_category_key
-# from utils.utils import make_name_pretty, extract_category_key, dictionary_languages
-dictionary_languages = {"esp": "Español", "eng": "English", "sve": "Svenska", "deu": "Deutsch", "cat": "Català"}
+from utils.utils import make_name_pretty, extract_category_key, dictionary_languages
 
 # setup
 st.set_page_config(
