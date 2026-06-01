@@ -1,26 +1,31 @@
 import glob
 import os
+import sys
 from difflib import SequenceMatcher
-
 import pandas as pd
 import lyricsgenius
 from dotenv import load_dotenv
 import re
+import spacy
 
 from read_playlist import get_playlist_tracks
-from utils.utils import clean_text, sanitize_filename, clean_title, normalize_text
-import json
+from utils.utils import clean_text, sanitize_filename, clean_title, normalize_text, SPACY_MODELS, EXPECTED_SYNTAX
 
-LANGUAGE = "se"
+language = "sve"
 MIN_REPETITIONS = 4 # min words for song
 MIN_SONGS = 5 # min songs per category
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-CATEGORY_PATH = os.path.join(ROOT_DIR, "data", LANGUAGE, f"{LANGUAGE}_categories.json")
+MASTER_CSV_PATH = os.path.join(ROOT_DIR, "data", "master_categories.csv")
 
-with open(CATEGORY_PATH, "r", encoding="utf-8") as file:
-    categories = json.load(file)
+df_master = pd.read_csv(MASTER_CSV_PATH)
+
+categories = {}
+for cat in df_master['category'].dropna().unique():
+    words = df_master[df_master['category'] == cat][language].dropna().astype(str).str.lower().tolist()
+    if words:
+        categories[cat] = words
 
 load_dotenv()
 GENIUS_ACCESS_TOKEN = os.getenv('GENIUS_ACCESS_TOKEN')
@@ -28,13 +33,21 @@ genius = lyricsgenius.Genius(GENIUS_ACCESS_TOKEN)
 genius.verbose = False
 genius.remove_dict = True
 
-path_csv = os.path.join("data", LANGUAGE, "playlist.csv")
+path_csv = os.path.join("data", language, "playlist.csv")
 songs_playlist = get_playlist_tracks(path_csv)
 
 generated_playlists = {category: [] for category in categories}
 seen_lines_per_cat = {category: [] for category in categories}
 
-os.makedirs(os.path.join(LANGUAGE, 'lyrics'), exist_ok=True)
+os.makedirs(os.path.join(ROOT_DIR, "data", language, 'lyrics'), exist_ok=True)
+
+model_name = SPACY_MODELS.get(language, "en_core_web_sm")
+try:
+    print(f"Loading linguistic model ({model_name})...")
+    nlp = spacy.load(model_name)
+except OSError:
+    print(f"\nERROR: {model_name} is not installed.")
+    sys.exit()
 
 def get_lyric(name, artist, filepath):
     if os.path.exists(filepath):
@@ -61,6 +74,14 @@ def analyze_lyric(lyrics_text, song_name, artist_name):
     lines_per_category = {cat: [] for cat in categories}
     assigned_categories = set()
 
+    doc = nlp(lyrics_text)
+
+    analyzed_tokens = [
+        (token.text.lower(), token.pos_)
+        for token in doc
+        if not token.is_punct and not token.is_space
+    ]
+
     cleaned_lyrics = clean_text(lyrics_text)
     words_in_lyrics = cleaned_lyrics.split()
 
@@ -70,19 +91,26 @@ def analyze_lyric(lyrics_text, song_name, artist_name):
     processed_lines = [(line.strip(), clean_text(line).split()) for line in valid_lines]
 
     for category, keywords in categories.items():
+        valid_type_tags = EXPECTED_SYNTAX.get(category)
+
         for keyword in keywords:
             norm_keyword = normalize_text(keyword)
 
+            # avoid word if it's in string
             if re.search(rf'\b{norm_keyword}\b', forbidden_string):
                 unplayable_per_category[category].append(keyword)
                 continue
 
-            total_count = words_in_lyrics.count(keyword)
+            # only count if it's the right type of word
+            valid_count = sum(
+                1 for text, pos in analyzed_tokens
+                if text == keyword and pos in valid_type_tags
+            )
 
-            if total_count == 0:
+            if valid_count == 0:
                 continue
 
-            if total_count < MIN_REPETITIONS:
+            if valid_count < MIN_REPETITIONS:
                 unplayable_per_category[category].append(keyword)
                 continue
 
@@ -107,7 +135,7 @@ def process_song(song):
     print(f"Searching lyrics for: {name} - {artist}...")
 
     filename = sanitize_filename(f"{artist}_{name}.txt")
-    filepath = os.path.join(ROOT_DIR, "data", LANGUAGE, 'lyrics', filename)
+    filepath = os.path.join(ROOT_DIR, "data", language, 'lyrics', filename)
 
     try:
         lyrics_text = get_lyric(name, artist, filepath)
@@ -161,8 +189,8 @@ def process_song(song):
         print(f"Error processing {name}: {e}")
 
 def main():
-    GAME_FOLDER = os.path.join(ROOT_DIR, "data", LANGUAGE, "game")
-    LYRICS_FOLDER = os.path.join(ROOT_DIR, "data", LANGUAGE, "lyrics")
+    GAME_FOLDER = os.path.join(ROOT_DIR, "data", language, "game")
+    LYRICS_FOLDER = os.path.join(ROOT_DIR, "data", language, "lyrics")
 
     os.makedirs(LYRICS_FOLDER, exist_ok=True)
 

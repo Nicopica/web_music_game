@@ -1,4 +1,3 @@
-import json
 import os
 import glob
 import pandas as pd
@@ -7,92 +6,83 @@ import streamlit.components.v1 as components
 
 from website.logic import handle_category_change, new_song, handle_language_change
 from website.ui import render_options_and_answer
-from utils.state import init_session_state
-from utils.utils import make_name_pretty, extract_category_key
+from website.state import init_session_state
+from utils.utils import make_name_pretty, extract_category_key, dictionary_languages
 
-# ideas:
-#   show whole lyrics and places to fill the missing words
-#   more languages
-#   get better categories (beter distribution)
-#   import playlist?
+# setup
+st.set_page_config(
+    page_title="Guess the Word",
+    page_icon="assets/img/Yohproject-Crayon-Cute-Folder-music.256.png",
+    layout="centered"
+)
 
-
-# run locally:
-# python -m .streamlit run app.py
-# python -m .streamlit run app.py --server.headless true
-
-# POSSIBILITIES = 5
-
-
+# cache
 @st.cache_data
-def load_categories_json(language="es"):
-    category_path = os.path.join("data", language, f"{language}_categories.json")
-    with open(category_path, "r", encoding="utf-8") as file:
-        return json.load(file)
-
-@st.cache_data
-def get_category_options(language="es"):
+def get_category_options(language="esp"):
     temp_list = []
     for file in glob.glob(f"data/{language}/game/playlist_*.csv"):
         df = pd.read_csv(file)
         cat_name = make_name_pretty(file)
         visual_name = f"{cat_name} ({len(df)})"
         temp_list.append((visual_name, file, len(df)))
-    # sort by quantity of songs
     temp_list.sort(key=lambda x: x[2], reverse=True)
-    options = {item[0]: item[1] for item in temp_list}
-    return options
+    return {item[0]: item[1] for item in temp_list}
 
 
 @st.cache_data
 def load_data(filepath):
-    try:
-        return pd.read_csv(filepath)
-    except FileNotFoundError:
-        return None
+    return pd.read_csv(filepath)
 
-category_options = get_category_options()
+@st.cache_data
+def load_master_categories():
+    return pd.read_csv("data/master_categories.csv")
+
+master_dict = load_master_categories()
+
+if 'language' not in st.session_state:
+    st.session_state.language = "esp"
+
+current_lang = st.session_state.language
+category_options = get_category_options(current_lang)
+options_translation = list(dictionary_languages.keys())
+options_translation.remove(current_lang)
 
 init_session_state(list(category_options.keys())[0])
 
-# main flow
-st.set_page_config(page_title="Guess the Word", page_icon="assets/img/Yohproject-Crayon-Cute-Folder-music.256.png",
-                   layout="centered")
-
-dictionary_languages = {
-    "es": "Español",
-    "en": "English",
-    "se": "Svenska",
-    "de": "Deutsch"
-}
-
-col_empty, col_button = st.columns([8, 2])
-with col_button:
-    with st.popover("Language", use_container_width=True):
-
-        for lang_code, lang_name in dictionary_languages.items():
-
-            if st.button(lang_name, key=f"btn_{lang_code}", use_container_width=True):
-
-                if st.session_state.language != lang_code:
-                    st.session_state.language = lang_code
-                    handle_language_change()
-                st.rerun()
-
-current_lang = st.session_state.language
-categories = load_categories_json(current_lang)
-category_options = get_category_options(current_lang)
-
-if st.session_state.get('visual_category') is None:
+if st.session_state.get('visual_category') not in category_options:
     st.session_state.visual_category = list(category_options.keys())[0]
 
-default_cat = list(category_options.keys())[0]
-init_session_state(default_cat)
+if 'translate_to' not in st.session_state or st.session_state.translate_to not in dictionary_languages:
+    st.session_state.translate_to = "eng"
 
-# categories bar
-with st.popover(f"Current category: {st.session_state.visual_category}", use_container_width=True):
+
+
+# sidebar
+with st.sidebar:
+    st.write("**Settings**")
+
+    with st.popover("**Change language**", use_container_width=True):
+        st.radio(
+            "lan_change",
+            options=list(dictionary_languages.keys()),
+            format_func=lambda x: dictionary_languages[x],
+            key="language",
+            on_change=handle_language_change,
+            label_visibility="collapsed"
+        )
+
+    with st.popover("**Translate word to**", use_container_width=True):
+        st.radio(
+            "transl_change",
+            options=options_translation,
+            format_func=lambda x: dictionary_languages[x],
+            key="translate_to",
+            label_visibility="collapsed"
+        )
+
+with st.popover(f"Current: {st.session_state.visual_category}", use_container_width=True):
     st.radio(
-        "",
+        "Select Category",
         options=list(category_options.keys()),
         index=list(category_options.keys()).index(st.session_state.visual_category),
         key="category_selector",
@@ -100,49 +90,47 @@ with st.popover(f"Current category: {st.session_state.visual_category}", use_con
         label_visibility="collapsed"
     )
 
-selected_file = category_options[st.session_state.visual_category]
-
 st.markdown("""
     <style>
-        /* hide blinking cursor and touch events on selectbox */
+        .block-container { padding-top: 4rem; }
         div[data-baseweb="select"] input { caret-color: transparent !important; pointer-events: none !important; }
-        
-        /* reduce top margin */
-        .block-container { padding-top: 2rem; }
-        
-        /* hide .streamlit header */
-        header { visibility: hidden; }
-        
-        /* force hide scrollbar globally */
-        *::-webkit-scrollbar { display: none !important; width: 0px !important; }
-        * { scrollbar-width: none !important; -ms-overflow-style: none !important; }
-        }
     </style>
 """, unsafe_allow_html=True)
 
+selected_file = category_options[st.session_state.visual_category]
 selected_playlist = load_data(selected_file)
-
 cat_key = extract_category_key(selected_file)
-full_category_words = [w.lower() for w in categories.get(cat_key, [])]
+
+if cat_key.lower() in master_dict['category'].str.lower().values:
+    df_cat = master_dict[master_dict['category'].str.lower() == cat_key.lower()]
+    full_category_words = df_cat[current_lang].dropna().str.lower().tolist()
+else:
+    full_category_words = []
+    st.warning(f"ERROR: Can't find words for '{cat_key}'.")
 
 if st.session_state.current_song is None:
     new_song(selected_playlist, full_category_words)
     st.rerun()
 
-# press new song or there is no song
 st.button("Draw New Song", use_container_width=True, type="primary",
           on_click=new_song, args=(selected_playlist, full_category_words))
+
 # game flow
 if st.session_state.current_song is not None:
     c = st.session_state.current_song
-
-    # read target word from session state
     target_word = st.session_state.target_word
     track_id = str(c['track_id'])
 
-    # st.subheader("Listen to the track")
+    # calculate translation
+    st.session_state.current_translation = None
+    if st.session_state.get('translate_to'):
+        idioma_origen = st.session_state.language
+        idioma_destino = st.session_state.translate_to
 
-    # spotify mini player
+        match = master_dict[master_dict[idioma_origen].str.lower() == target_word.lower()]
+        if not match.empty:
+            st.session_state.current_translation = str(match.iloc[0][idioma_destino]).capitalize()
+
     iframe_html = f"""
         <iframe style="border-radius:12px" 
             src="https://open.spotify.com/embed/track/{track_id}?utm_source=generator" 

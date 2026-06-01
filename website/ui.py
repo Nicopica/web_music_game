@@ -1,19 +1,19 @@
 import re
 import streamlit as st
+from utils.utils import dictionary_languages, prepositions_languages
 
 
 def inject_pill_css(is_correct):
-    # doesnt work?
     pill_color = "#1DB954" if is_correct else "#FF4B4B"
     st.markdown(f"""
-        <style>
-            div[data-testid="stPills"] label[data-selected="true"] {{
-                background-color: {pill_color} !important;
-                color: white !important;
-                border-color: {pill_color} !important;
-            }}
-        </style>
-    """, unsafe_allow_html=True)
+            <style>
+                div[data-testid="stPills"] label[data-selected="true"] {{
+                    background-color: {pill_color} !important;
+                    color: white !important;
+                    border-color: {pill_color} !important;
+                }}
+            </style>
+        """, unsafe_allow_html=True)
 
 def render_options_and_answer(options, target_word, matched_lines):
     is_disabled = st.session_state.answered or st.session_state.show_answer
@@ -40,21 +40,28 @@ def render_options_and_answer(options, target_word, matched_lines):
     selected = st.session_state.selected_option
     is_correct = (selected.lower() == target_word.lower()) if selected else False
 
-    if selected:
-        inject_pill_css(is_correct)
+    # if selected:
+    #     inject_pill_css(is_correct)
 
     status_msg = get_status_message(selected, is_correct)
     highlighted_verse = format_highlighted_verse(matched_lines, target_word)
 
+
+    translated_word = st.session_state.get('current_translation')
+    language_code = st.session_state.get('translate_to')
+    language_pretty = dictionary_languages[language_code]
+    translated_preposition = prepositions_languages[language_code]
+
     html_reveal = f"""
         <p style="text-align: center; font-size: 1.5rem; font-style: italic; margin-top: 20px;">
-            {status_msg} The word was <b>{target_word.title()}</b><br><br>
+            {status_msg} The word was <b>{target_word.title()}</b>, {translated_preposition} {language_pretty}: <b>{translated_word}</b><br><br>
             "{highlighted_verse}"
         </p>
     """
     st.markdown(html_reveal, unsafe_allow_html=True)
 
 def get_status_message(selected_option, is_correct):
+
     # error
     if not selected_option:
         return "<span style='color: gray; font-weight: bold;'>Answer shown.</span>"

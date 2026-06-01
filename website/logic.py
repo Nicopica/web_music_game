@@ -1,5 +1,3 @@
-import streamlit as st
-
 import random
 import streamlit as st
 
@@ -14,6 +12,7 @@ def reset_game():
     st.session_state.played_songs = []
     st.session_state.target_word = ""
     st.session_state.current_category = None
+    st.session_state.translate_to = None
 
 def turn_on_answer():
     st.session_state.answered = True
@@ -27,7 +26,6 @@ def handle_language_change():
     st.session_state.visual_category = None
     st.session_state.current_song = None
     st.session_state.played_songs = []
-
 
 def new_song(selected_playlist, full_category_words):
     # use new songs

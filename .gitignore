@@ -17,5 +17,5 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-data/es/lyrics/
-data/en/lyrics/
+data/esp/lyrics/
+data/eng/lyrics/
