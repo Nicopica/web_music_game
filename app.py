@@ -16,9 +16,6 @@ st.set_page_config(
 )
 st.markdown("""
     <style>
-        /* hide top */
-        [data-testid="stHeader"] {visibility: hidden;}
-        
         /* hide bottom */
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
