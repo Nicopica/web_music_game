@@ -28,6 +28,9 @@ def handle_language_change():
     st.session_state.played_songs = []
 
 def new_song(selected_playlist, full_category_words):
+    if 'played_track_ids' not in st.session_state:
+        st.session_state.played_track_ids = []
+
     # use new songs
     available_songs = selected_playlist.drop(st.session_state.played_songs, errors='ignore')
     if available_songs.empty:

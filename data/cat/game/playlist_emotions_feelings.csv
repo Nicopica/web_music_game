@@ -1,79 +1,50 @@
 ﻿name,artist,totalMatches,foundWords,unplayableWords,matchedLines,track_id
-Camila,The Tyets,1,por,,"Amb el sеu Seat Panda, por ai | Amb el seu Seat Panda, por ai | Amb el seu Seat Panda, por ai | Amb el seu Seat Panda, por ai",7Cm5tjS184tqmc2IcoRpvY
+Camila,The Tyets,1,por,,"Amb el sеu Seat Panda, por ai | Amb el seu Seat Panda, por ai",7Cm5tjS184tqmc2IcoRpvY
 CENT PER CENT,Julieta,1,amor,"por, sort","Recordo mil històries, amor meu, les porto amb mi",4DN7qIOgFue3K9mH6sJs6Y
-La Roda,Ouineta,1,amor,,,2KL8XmoRxDBrQdyfu39Rzj
-LOTUS,Mushkaa,1,amor,,"Però, mi amor, no m'aguanto | Però, mi amor, no m'aguanto (Però, mi amor, no m'aguanto) | Però, mi amor, no m'aguanto | Però, mi amor, no m'aguanto (Però, mi amor, no m'aguanto)",7l9phRNA1AH6lzcZBAVKZw
-Moblido doblidarte,Julieta,2,"amor, sort",,El meu primer amor | Va ser l'últim amor | Però per mala sort sempre m'oblido d'oblidar-te | Però per bona sort sempre m'oblidaré d'oblidar-te | Però per mala sort sempre m'oblido d'oblidar-te | Però per bona sort sempre m'oblidaré d'oblidar-te,3mkhUu2vyKNeEZpcAvPl2J
-Jean Blau,Julieta,1,por,amor,"Vacil·lo la pista, llo-lloras por una popstar | Vacil·lo la pista, llo-lloras por una popstar | Vacil·lo la pista, llo-lloras por una popstar | Llo-lloras por una popstar | Llo-llo-lloras por una popstar",1P21dQqCpaF9LKXxTuG7Jn
-Mon Cheri Go Home,Maria Jaume,1,amor,,Jo no vull un amor de videotrucada | Jo no vull un amor de videotrucada | Jo no vull un amor de videotrucada | Jo no vull un amor de videotrucada,0340Kvl35SM3t1Hg0ReBj4
-Només viure,Ginestà,1,amor,"por, cridar",,1JElpM8NFE6PzsTRkca0ru
-Jenifer,Els Catarres,1,amor,"por, desig",I lluitarem pel nostre amor prohibit | I lluitarem pel nostre amor prohibit | I lluitarem pel nostre amor prohibit | I lluitarem pel nostre amor prohibit,2MeWCYKsmvPt8HSYVYVEUJ
-Trencam el cor,Julieta,1,amor,,,5x1551QSfC7PJhHN753psJ
-Agafant lHoritzó,Txarango,1,por,alegria,"Que no ens guanyi la por | A la por i al racisme, calar-hi foc | Que no ens guanyi la por | Que no ens guanyi la por",5YB821pnkkytFH7CpZj9PV
-Jenifer,Els Catarres,1,amor,"por, desig",I lluitarem pel nostre amor prohibit | I lluitarem pel nostre amor prohibit | I lluitarem pel nostre amor prohibit | I lluitarem pel nostre amor prohibit,7hiceWoDGGP4RadNyGxRdm
-Transmets Energia,Buhos,1,alegria,,,1PN5u1HFeRKkl74aCmSg0K
-Agafant LHoritzó,Txarango,1,por,alegria,"Que no ens guanyi la por | A la por i al racisme, calar-hi foc | Que no ens guanyi la por | Que no ens guanyi la por",7McIJl4WBaSynRKQvHtrVO
-El Raïm Es Fa Pansa,Doctor Prats,1,por,llàgrimes,"Per por a perdre ens perdem | La por ens fa estar desperts, no vull un mar de llàgrimes | Per por a perdre ens perdem | Per por a perdre ens perdem | Per por a perdre ens perdem | Per por a perdre ens perdem",3nCHTHm5rvLUo5EcQy4boF
-TEstimo Molt,LaxnBusto,1,trist,,Si estàs amb mi desapareix tot el que es trist | Si estàs amb mi desapareix tot el que es trist | Si estàs amb mi desapareix tot el que es trist | Si estàs amb mi desapareix tot el que es trist,3FY3W22KrDkkxintD2gpqk
-Mami,La Fúmiga,1,feliç,"plorar, sort","Amb tu, mami, mami, jo sóc més feliç | Amb tu, mami, mami, jo sóc més feliç | Amb tu, mami, mami, jo sóc més feliç | Amb tu, mami, mami, jo sóc més feliç, feliç, feliç, feliç, feliç | Amb tu, mami, mami, jo sóc més feliç",1dNkoG4EhPNeiBJpRT15Dc
-La Meva Terra És el Mar,LaxnBusto,1,cridar,"amor, boig","Dóna'm força per cridar | Dóna'm força per cridar | Dóna'm força per cridar | Dóna'm força per cridar, que jo sóc de mi | Dóna'm força per cridar, que si l'aigua és amor",3hPC5auJimlAfI0NCdkwsU
-Ara,LaxnBusto,1,por,"amor, desig",Quan tinc por quan més por em fa la por | Quan tinc por quan més por em fa la por | Quan tinc por quan més por em fa la por,1sGomTje7YGgxCTkoJpNaG
-La Meva Terra és el Mar,LaxnBusto,1,cridar,"amor, boig","Dóna'm força per cridar | Dóna'm força per cridar | Dóna'm força per cridar | Dóna'm força per cridar, que jo sóc de mi | Dóna'm força per cridar, que si l'aigua és amor",2V58oh5emQj22lfn8xaP9I
+LOTUS,Mushkaa,1,amor,,"Però, mi amor, no m'aguanto | Però, mi amor, no m'aguanto (Però, mi amor, no m'aguanto)",7l9phRNA1AH6lzcZBAVKZw
+Moblido doblidarte,Julieta,2,"amor, sort",,El meu primer amor | Va ser l'últim amor | Però per mala sort sempre m'oblido d'oblidar-te | Però per bona sort sempre m'oblidaré d'oblidar-te,3mkhUu2vyKNeEZpcAvPl2J
+Jean Blau,Julieta,1,por,amor,"Vacil·lo la pista, llo-lloras por una popstar | Llo-lloras por una popstar | Llo-llo-lloras por una popstar",1P21dQqCpaF9LKXxTuG7Jn
+Mon Cheri Go Home,Maria Jaume,1,amor,,Jo no vull un amor de videotrucada,0340Kvl35SM3t1Hg0ReBj4
+Jenifer,Els Catarres,1,amor,"por, desig",I lluitarem pel nostre amor prohibit,2MeWCYKsmvPt8HSYVYVEUJ
+Agafant lHoritzó,Txarango,1,por,alegria,"Que no ens guanyi la por | A la por i al racisme, calar-hi foc",5YB821pnkkytFH7CpZj9PV
+El Raïm Es Fa Pansa,Doctor Prats,1,por,llàgrimes,"Per por a perdre ens perdem | La por ens fa estar desperts, no vull un mar de llàgrimes",3nCHTHm5rvLUo5EcQy4boF
+TEstimo Molt,LaxnBusto,1,trist,,Si estàs amb mi desapareix tot el que es trist,3FY3W22KrDkkxintD2gpqk
+Mami,La Fúmiga,1,feliç,"plorar, sort","Amb tu, mami, mami, jo sóc més feliç | Amb tu, mami, mami, jo sóc més feliç, feliç, feliç, feliç, feliç",1dNkoG4EhPNeiBJpRT15Dc
+La Meva Terra És el Mar,LaxnBusto,1,cridar,"amor, boig","Dóna'm força per cridar | Dóna'm força per cridar, que jo sóc de mi | Dóna'm força per cridar, que si l'aigua és amor",3hPC5auJimlAfI0NCdkwsU
+Ara,LaxnBusto,1,por,"amor, desig",Quan tinc por quan més por em fa la por,1sGomTje7YGgxCTkoJpNaG
 Blau,LaxnBusto,1,amor,,Que ara surten confesant el meu amor,5VtCwEf4A24olv3aiC578w
-La Meva Terra és el Mar,LaxnBusto,1,cridar,"amor, boig","Dóna'm força per cridar | Dóna'm força per cridar | Dóna'm força per cridar | Dóna'm força per cridar, que jo sóc de mi | Dóna'm força per cridar, que si l'aigua és amor",010M4IvhwUUNuuuRUTLWBm
-Ara,LaxnBusto,1,por,"amor, desig",Quan tinc por quan més por em fa la por | Quan tinc por quan més por em fa la por | Quan tinc por quan més por em fa la por,2qLzG4AH1kvx4W4YyMrauZ
-Johnny El Melenes,LaxnBusto,1,sort,orgull,No tothom té la sort de poder fer-ho | No tothom té la sort de poder estar a Mart amb una tia | I la mala sort que allí et segueixi la policia | Quina sort teniu nenes | Quina sort teniu nenes,1AqYaH0dIyOdnRakFIvgZz
-Testimo Molt,LaxnBusto,1,trist,,Si estàs amb mi desapareix tot el que es trist | Si estàs amb mi desapareix tot el que es trist | Si estàs amb mi desapareix tot el que es trist | Si estàs amb mi desapareix tot el que es trist,5FHcAaKGHu5MI0oN7FoJWg
-Transmets Energia,Buhos,1,alegria,,,0KgMBD1JpkaZyBYpKeE0L9
-Testimo Molt Live,LaxnBusto,1,trist,,Si estàs amb mi desapareix tot el que es trist | Si estàs amb mi desapareix tot el que es trist | Si estàs amb mi desapareix tot el que es trist | Si estàs amb mi desapareix tot el que es trist,1WFtrR8vfb77y3hIoSkNh2
-Avui fas anys,Dijous Paella,1,sort,,Et desitgem sort i salut | Et desitgem sort i salut | Et desitgem sort i salut | Et desitgem sort i salut,3fRcvnxXF9OmDdepqhG3CE
-El Far del Sud,Sopa De Cabra,1,amor,"trist, dolor, sort",Et donaria amor si poguessis tornar-me'n | Et donaria amor si ens poguéssim mirar | Et donaria amor si poguessis tornar-me'n | Et donaria amor si ens poguéssim mirar | Et donaria amor si poguessis tornar-me'n | Et donaria amor si pogués ser veritat | Et donaria amor | Et donaria amor si vulguessis quedar-te,5BJUPXEuhz6jEFdvmEXdof
+Johnny El Melenes,LaxnBusto,1,sort,orgull,No tothom té la sort de poder fer-ho | No tothom té la sort de poder estar a Mart amb una tia | I la mala sort que allí et segueixi la policia | Quina sort teniu nenes,1AqYaH0dIyOdnRakFIvgZz
+Avui fas anys,Dijous Paella,1,sort,,Et desitgem sort i salut,3fRcvnxXF9OmDdepqhG3CE
+El Far del Sud,Sopa De Cabra,1,amor,"trist, dolor, sort",Et donaria amor si poguessis tornar-me'n | Et donaria amor si ens poguéssim mirar | Et donaria amor si pogués ser veritat | Et donaria amor | Et donaria amor si vulguessis quedar-te,5BJUPXEuhz6jEFdvmEXdof
 Aniversari,Manel,1,desig,,"""Que demani un desig, que demani un desig"" | Els teus ulls cavalcaven buscant un desig | I accedir al teu desig travessant la paret del llagrimal | I ja dins del desig veure si hi ha bon ambient",1mmaYXKNMnxGgk3iHCTF9R
-No Mho Esperava,Miki Núñez,1,sort,amor,"No m'ho esperava, he trobat la sort | No m'ho esperava, he trobat la sort | No m'ho esperava (no m'ho esperava), he trobat la sort (he trobat la sort)",1vWvHjvmZozcUdJDGJ1K9y
-Barcelona Tropical,Suu,1,amor,,,2ErHtz3KH5W8OEpnXFagC6
+No Mho Esperava,Miki Núñez,1,sort,amor,"No m'ho esperava, he trobat la sort | No m'ho esperava (no m'ho esperava), he trobat la sort (he trobat la sort)",1vWvHjvmZozcUdJDGJ1K9y
 Quan caminàvem,Aspencat,1,amor,por,El nostre amor serà la clau que obri tots els panys,3dx71UjqkLL9RuMCSQciFa
-Txarango al Canet Rock,The Tyets,1,sort,,"Faig l’últim glop i penso quina sort | Faig l’últim glop i penso quina sort | I quina sort, poder estar a les festes que hem estat | Faig l’últim glop i penso quina sort | Faig l’últim glop i penso quina sort | Faig l’últim glop i penso quina sort | I quina sort haver tornat sa i estalvi | Faig l’últim glop i penso quina sort | Faig l’últim glop i penso quina sort | Faig l’últim glop i penso quina sort | I quina sort",6bZ8H2j6MdrXYicMbfaUew
-Final Feliç,Joan Miquel Oliver,1,pena,feliç,"I quina pena es desencís, que rotunda i que valent; | I quina pena es desencís, que dolenta i que dolent; | I quina pena es desencís, que dolenta i que dolent; | I quina pena es desencís, que rotunda i que valent;",79VZJbDYiJ48yqLECDknjQ
-Aniversari,Manel,1,desig,,"""Que demani un desig, que demani un desig"" | Els teus ulls cavalcaven buscant un desig | I accedir al teu desig travessant la paret del llagrimal | I ja dins del desig veure si hi ha bon ambient",3rn7vtyiRGTexwbkYfnEn9
+Txarango al Canet Rock,The Tyets,1,sort,,"Faig l’últim glop i penso quina sort | Faig l’últim glop i penso quina sort | I quina sort, poder estar a les festes que hem estat | I quina sort haver tornat sa i estalvi | I quina sort",6bZ8H2j6MdrXYicMbfaUew
+Final Feliç,Joan Miquel Oliver,1,pena,feliç,"I quina pena es desencís, que rotunda i que valent; | I quina pena es desencís, que dolenta i que dolent;",79VZJbDYiJ48yqLECDknjQ
 El Cim,MAER,1,desig,"odi, pena",Mai no he sentit un desig com aquest | És el desig de la teva nuesa | És el desig del teu cos vora el meu | Un fosc desig vagament de fer mal | O bé el desig simplement impossible,1cAHjw3lBM4nB5qWQP57eT
-El Far del Sud,Sopa De Cabra,1,amor,"trist, dolor, sort",Et donaria amor si poguessis tornar-me'n | Et donaria amor si ens poguéssim mirar | Et donaria amor si poguessis tornar-me'n | Et donaria amor si ens poguéssim mirar | Et donaria amor si poguessis tornar-me'n | Et donaria amor si pogués ser veritat | Et donaria amor | Et donaria amor si vulguessis quedar-te,2TUeogCC2yzy2yN6QRJ8bd
-Tokyo,Els Catarres,1,petó,"feliç, pena",Et despertaré a Tokyo amb un petó bora del nas | Et despertaré a Tokyo amb un petó bora del nas | Et despertaré a Tokyo amb un petó bora del nas | Et despertaré a Tokyo amb un petó bora del nas | Et despertaré a Tokyo amb un petó bora del nas,0pktk1OOeJBEbWrqKB2cEs
-El Far del Sud,Sopa De Cabra,1,amor,"trist, dolor, sort",Et donaria amor si poguessis tornar-me'n | Et donaria amor si ens poguéssim mirar | Et donaria amor si poguessis tornar-me'n | Et donaria amor si ens poguéssim mirar | Et donaria amor si poguessis tornar-me'n | Et donaria amor si pogués ser veritat | Et donaria amor | Et donaria amor si vulguessis quedar-te,2nZ2shb6iuB1vzoV2mFMxf
+Tokyo,Els Catarres,1,petó,"feliç, pena",Et despertaré a Tokyo amb un petó bora del nas,0pktk1OOeJBEbWrqKB2cEs
 Illes Dins dun Riu,Tomeu Penya,1,amor,por,Aquest amor mai no s’aturarà,3fPuZeRTy3dpNxRg7DFWNq
-Jenifer,Els Catarres,1,amor,"por, desig",I lluitarem pel nostre amor prohibit | I lluitarem pel nostre amor prohibit | I lluitarem pel nostre amor prohibit | I lluitarem pel nostre amor prohibit,5w0FYsvzrDzZ3x8RncVOel
-Llençat  Remix,KZU,1,por,pena,"Con el mechero que creo que se caía por los pies | Ah-ah, por Dios (Yeah) | Con el mechero que creo que se caía por los pies | Ah-ah, por Dios",4G4BCFdXXxPCvVGp6hcs9n
-Tokyo,Els Catarres,1,petó,"feliç, pena",Et despertaré a Tokyo amb un petó bora del nas | Et despertaré a Tokyo amb un petó bora del nas | Et despertaré a Tokyo amb un petó bora del nas | Et despertaré a Tokyo amb un petó bora del nas | Et despertaré a Tokyo amb un petó bora del nas,3cVRacvzb6fwQoPRh4tjKF
+Llençat  Remix,KZU,1,por,pena,"Con el mechero que creo que se caía por los pies | Ah-ah, por Dios (Yeah) | Ah-ah, por Dios",4G4BCFdXXxPCvVGp6hcs9n
 Vull saber de tu,Ginestà,1,amor,por,Suposo que quan coneixes algú després de viure un gran amor,606xKikgrFlFZe8mi9i0Qb
-tenviaria una carta però potser no cal,Svetlana,1,trist,,I a vegades pensar això em fa posar trist | I a vegades pensar això em fa posar trist | I a vegades pensar això em fa posar trist | I a vegades pensar això em fa posar trist,5CYNaSX0ppOiZ78SDmAytC
-Mama,Ginestà,1,amor,"dolor, riure",,3CxeJ23YnUCJLedV4uISCu
-Avui,Maio,1,por,,"Muy cerca 'el futuro, seguro que no se detiene, seguro que vienen por m— | Muy cerca 'el futuro, seguro que no se detiene, seguro que vienen por mí | Ardiendo por dentro, lo has visto al de negro | Muy cerca 'el futuro, seguro que no se detiene, seguro que vienen por mí (Ah) | Muy cerca 'el futuro, seguro que no se detiene, seguro que vienen por mí",5bi5xleG60fFBJBhJAT0CE
-La meva sort,Ginestà,1,por,"amor, feliç, somriure, bogeria, sort",Potser em fa por el present | Potser em fa por el present | Li he perdut la por a la por | Potser em fa por el present | Potser em fa por el present | Potser em fa por el present,2VOwxQnBFyAYRsRKtO9zbm
-Viure Junts,Raimon,1,amor,,,6MT66jYFbxwwGN2xevOys8
-Perquè He Plorat,Dagoll Dagom,1,plorar,"odi, feliç, somriure, sort",Per què ha plorat com mai no havia vist plorar? | Per qui no havia de plorar? | Per qui no havia de plorar? (Com mai no havia vist plorar?) | Per què ha plorat com mai no havia vist plorar? | Per qui no havia de plorar? | Per qui no havia de plorar? (Com mai no havia vist plorar?),5vRHAzn01j14aBPc19fJAW
+tenviaria una carta però potser no cal,Svetlana,1,trist,,I a vegades pensar això em fa posar trist,5CYNaSX0ppOiZ78SDmAytC
+Avui,Maio,1,por,,"Muy cerca 'el futuro, seguro que no se detiene, seguro que vienen por m— | Muy cerca 'el futuro, seguro que no se detiene, seguro que vienen por mí | Ardiendo por dentro, lo has visto al de negro | Muy cerca 'el futuro, seguro que no se detiene, seguro que vienen por mí (Ah)",5bi5xleG60fFBJBhJAT0CE
+La meva sort,Ginestà,1,por,"amor, feliç, somriure, bogeria, sort",Potser em fa por el present | Li he perdut la por a la por,2VOwxQnBFyAYRsRKtO9zbm
+Perquè He Plorat,Dagoll Dagom,1,plorar,"odi, feliç, somriure, sort",Per què ha plorat com mai no havia vist plorar? | Per qui no havia de plorar? | Per qui no havia de plorar? (Com mai no havia vist plorar?),5vRHAzn01j14aBPc19fJAW
 Raspall de dents,Ginestà,1,amor,trist,Jo també amor t'ho juro,4T7f8VshYCZDUFS8r1iHxu
-MERCURI I MART,MARIA HEIN,1,por,,Digue'm si tens por a volar | Digue'm si tens por a volar | Digue'm si tens por a volar | Digue'm si tens por a volar | Digue'm si tens por a volar | Digue'm si tens por a volar,3o1mktdOcnVf17ZqfiHVU0
+MERCURI I MART,MARIA HEIN,1,por,,Digue'm si tens por a volar,3o1mktdOcnVf17ZqfiHVU0
 Deixarse anar la mà,Ginestà,1,amor,"feliç, somriure, abraçada, sort",Que no et falti amor i que els mals et siguin lleus,6TzRYx9HpEreO87ZxgsEZ4
-Tokyo,Els Catarres,1,petó,"feliç, pena",Et despertaré a Tokyo amb un petó bora del nas | Et despertaré a Tokyo amb un petó bora del nas | Et despertaré a Tokyo amb un petó bora del nas | Et despertaré a Tokyo amb un petó bora del nas | Et despertaré a Tokyo amb un petó bora del nas,6h5ANVxWsILl6vRy3e30Yt
 Voy a Celebrarlo,Lágrimas De Sangre,1,por,"amor, pena","Somos diferentes y por eso somos ricos | Parando por las plazas, pagando a pachas | Pero le mando besos por si me oye. ¡Un saludo! | Y por fortuna tenemos a los Blanks Wutang!",7Dd5p5mFpkZlEllO4Y7pCI
-El Raïm Es Fa Pansa,Doctor Prats,1,por,llàgrimes,"Per por a perdre ens perdem | La por ens fa estar desperts, no vull un mar de llàgrimes | Per por a perdre ens perdem | Per por a perdre ens perdem | Per por a perdre ens perdem | Per por a perdre ens perdem",1uU0hJNLKoMIvnOhAEwn4U
-Bailaremos,Itaca Band,1,por,,Una vida por un gato | Bailaremos por bailar | Cantaremos por amar | Bailaremos por bailar | Cantaremos por amar | En su lucha por ser presa | Bailaremos por bailar | Cantaremos por amar | Bailaremos por bailar | Cantaremos por amar | Bailaremos por bailar,0OyFAQzFtdQrHMZoQbQbBe
-Quan caminàvem,Aspencat,1,amor,por,El nostre amor serà la clau que obri tots els panys,4DT0LPAOwvN8vKXsKHeRLn
-180,Itaca Band,1,por,,"Por si no te vuelvo a ver, por si no te vuelvo a ver | Quiero un sol por cada día, una sonrisa y un porqué | Y por mucho que luche, no tuve tiempo para amar | Y por mucho que luche, no tuve tiempo para amar",2UiSGcM0uHDtrCkDKhrIFe
-Vull,ZOO,1,por,"plorar, dolor, culpa, orgull, desig","Vull que m’entres endins, sense por | Sense por, sense atendre a raons | I que fem de la por una dansa tribal | Perdre la por, matar la culpa, amic, no demanem res, ho volem tot!!! | I que fem de la por una dansa tribal | I que fem de la por una dansa tribal",61DmSdlgmsomp0FNxHVQCQ
+Bailaremos,Itaca Band,1,por,,Una vida por un gato | Bailaremos por bailar | Cantaremos por amar | En su lucha por ser presa,0OyFAQzFtdQrHMZoQbQbBe
+180,Itaca Band,1,por,,"Por si no te vuelvo a ver, por si no te vuelvo a ver | Quiero un sol por cada día, una sonrisa y un porqué | Y por mucho que luche, no tuve tiempo para amar",2UiSGcM0uHDtrCkDKhrIFe
+Vull,ZOO,1,por,"plorar, dolor, culpa, orgull, desig","Vull que m’entres endins, sense por | Sense por, sense atendre a raons | I que fem de la por una dansa tribal | Perdre la por, matar la culpa, amic, no demanem res, ho volem tot!!!",61DmSdlgmsomp0FNxHVQCQ
 Eterno Verano,Miki Núñez,1,por,,Andando por la orilla | Mataría por una cerveza fría | Pegajoso por la crema | Mataría por una sangría fría,2QOtabBloSf7iti6MndGIs
-La Casa de Tothom,Arnau Griso,1,por,,Si escupes por la ventana | Y por mucho que me queje | Pieles rojas por las calles | Los runners por Diagonal | Y por mucho que me queje | Y por mucho que me queje,6A4ThVuJCtxDtMUfHFSmuJ
-Salsa Boloñesa,Lágrimas De Sangre,1,por,amor,Y por los que aún no saben | Y por los que aún no saben | El miedo a recular por ahí pulula | Y por los que aún no saben | Y por los que aún no saben | Y por los que aún no saben | Y por los que aún no saben,1b0psBZ5Z2qedCvM2KkNDl
+La Casa de Tothom,Arnau Griso,1,por,,Si escupes por la ventana | Y por mucho que me queje | Pieles rojas por las calles | Los runners por Diagonal,6A4ThVuJCtxDtMUfHFSmuJ
+Salsa Boloñesa,Lágrimas De Sangre,1,por,amor,Y por los que aún no saben | El miedo a recular por ahí pulula,1b0psBZ5Z2qedCvM2KkNDl
 SECR3T,Julieta,1,amor,"alegria, por",El nostre amor ens crida per sortir,3Rch2FyIqqoyNKfFO7mB83
 Si ha de ser serà,Julieta,1,amor,"culpa, sort",Com el meu primer amor,5LX3hqlz4IYEtaxEKkYqpx
-Cul i Merda,The Tyets,1,pau,pena,Fem la pipa de la pau | Fem la pipa de la pau! | Fem la pipa de la pau | Fem la pipa de la pau!,6MCLjGvI7Mo2gXpagEZarZ
-Només viure,Ginestà,1,amor,"por, cridar",,5IetPJXFyb9J9aiMjCMlJq
-Moblido doblidarte,Julieta,2,"amor, sort",,El meu primer amor | Va ser l'últim amor | Però per mala sort sempre m'oblido d'oblidar-te | Però per bona sort sempre m'oblidaré d'oblidar-te | Però per mala sort sempre m'oblido d'oblidar-te | Però per bona sort sempre m'oblidaré d'oblidar-te,7AXFrgcthsVQeKJl5sW5BI
-Deixarse anar la mà,Ginestà,1,amor,"feliç, somriure, abraçada, sort",Que no et falti amor i que els mals et siguin lleus,5iQXwqwnZHHm9yGe5aYEBI
-Trencam el cor,Julieta,1,amor,,,4lT3u24QgLyJTsJMLFviM4
-Et deixo la mà,Mariona Escoda,1,por,,Ara puc dir que he perdut la por (Puc dir que he perdut la por) | Ara puc dir que he perdut la por (Puc dir que he perdut la por) | Ara puc dir que he perdut la por,4q9PKYXFCUDk4aj3qZKEce
-La meva sort,Ginestà,1,por,"amor, feliç, somriure, bogeria, sort",Potser em fa por el present | Potser em fa por el present | Li he perdut la por a la por | Potser em fa por el present | Potser em fa por el present | Potser em fa por el present,01q7SgslZuHOGFkuzcIZgS
-Per què he plorat,Figa Flawas,1,plorar,sort,Com mai no havia vist plorar | Per qui no havia de plorar | Com mai no havia vist plorar | Com mai no havia vist plorar | Com mai no havia vist plorar | Per qui no havia de plorar | Com mai no havia vist plorar,2JIQlpLkIIwQ9dmCwjbRh4
-Mhe Enamorat,Julen,1,amor,,Y yo no sé mi amor qué hago buscándote | Y yo no sé mi amor qué hago besándote | Y yo no sé mi amor qué hago buscándote | Y yo no sé mi amor qué hago besándote,0xFTLZEjSjpLchJ6P2cMu6
-Les mosques,Ginestà,2,"amor, sort",por,Doncs quina sort que estem tenint | Doncs quina sort quе estem tenint | I si la sort ve presumida | Doncs quina sort que estem tenint | Doncs quina sort que estem tenint | Doncs quina sort que estem tenint,5UC43c7RBHqupP0kLXHwqU
-Jenifer,Els Catarres,1,amor,"por, desig",I lluitarem pel nostre amor prohibit | I lluitarem pel nostre amor prohibit | I lluitarem pel nostre amor prohibit | I lluitarem pel nostre amor prohibit,2WOTHXKXl7iQGyvNj2g5kV
-El Maresme,The Tyets,1,sort,,Quina sort estimar casa meva | I quina sort tenir el Maresme | I quina sort tenir el Maresme | I quina sort tenir el Maresme,4YGzTWu8gvInMdFqAJohEa
+Cul i Merda,The Tyets,1,pau,pena,Fem la pipa de la pau | Fem la pipa de la pau!,6MCLjGvI7Mo2gXpagEZarZ
+Et deixo la mà,Mariona Escoda,1,por,,Ara puc dir que he perdut la por (Puc dir que he perdut la por) | Ara puc dir que he perdut la por,4q9PKYXFCUDk4aj3qZKEce
+Per què he plorat,Figa Flawas,1,plorar,sort,Com mai no havia vist plorar | Per qui no havia de plorar,2JIQlpLkIIwQ9dmCwjbRh4
+Mhe Enamorat,Julen,1,amor,,Y yo no sé mi amor qué hago buscándote | Y yo no sé mi amor qué hago besándote,0xFTLZEjSjpLchJ6P2cMu6
+Les mosques,Ginestà,2,"amor, sort",por,Doncs quina sort que estem tenint | Doncs quina sort quе estem tenint | I si la sort ve presumida,5UC43c7RBHqupP0kLXHwqU
+El Maresme,The Tyets,1,sort,,Quina sort estimar casa meva | I quina sort tenir el Maresme,4YGzTWu8gvInMdFqAJohEa

@@ -5,11 +5,12 @@ import unicodedata
 dictionary_languages = {"esp": "Español", "eng": "English", "sve": "Svenska", "deu": "Deutsch", "cat": "Català"}
 prepositions_languages = {"esp": "en", "eng": "in", "sve": "på", "deu": "auf", "cat": "en"}
 
-# python -m spacy download sv_core_news_sm
-# python -m spacy download es_core_news_sm
-# python -m spacy download en_core_web_sm
-# python -m spacy download de_core_news_sm
-# python -m spacy download ca_core_news_sm
+# python -m spacy download sv_core_news_lg
+# python -m spacy download es_core_news_lg
+# python -m spacy download en_core_web_lg
+# python -m spacy download de_core_news_lg
+# python -m spacy download ca_core_news_lg
+# C:\Users\Nico\AppData\Local\Programs\Python\Python39\python.exe -m spacy download ca_core_news_lg
 
 #  python -m streamlit run app.py --server.headless true
 
